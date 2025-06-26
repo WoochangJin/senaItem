@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>영웅 정보</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="heroData.js"></script>
+</head>
+<body>
+  <h1 id="hero-name">영웅 이름</h1>
+    <div class = "hrInfo">
+        <p class = "role"><strong>역할:</strong> <span id="role"></span></p>
+        <p><strong class = "set">세트옵션:</strong> <span id="tags"></span></p>
+        <p><strong class = "main">주옵션:</strong> <span id="main"></span></p>
+        <p><strong class = "sub">부옵션:</strong> <span id="sub"></span></p>
+        <p><strong class = "note">비고:</strong> <span id="note"></span></p>
+    </div>
+  <script>
+    window.onload = function () {
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get("name");
+
+      if (!name) {
+        document.getElementById("hero-name").textContent = "영웅 이름이 없습니다.";
+        return;
+      }
+
+      const hero = heroData[name];
+
+      if (!hero) {
+        document.getElementById("hero-name").textContent = `"${name}"에 해당하는 영웅이 없습니다.`;
+        return;
+      }
+
+      document.getElementById("hero-name").textContent = name;
+      document.getElementById("role").textContent = hero["역할"];
+      document.getElementById("tags").textContent = hero["태그"].join(", ");
+      document.getElementById("main").textContent = hero["세트옵션"].join(", ");
+      document.getElementById("sub").textContent = hero["추옵션"].join(", ");
+      document.getElementById("note").textContent = hero["비고"] || "-";
+    };
+  </script>
+</body>
+</html>

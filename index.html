@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <script src="heroData.js"></script>
+    <script src="script.js"></script>
+
+    <title>세븐나이츠 장비</title>
+    <link rel="stylesheet", href = "style.css">
+</head>
+
+<body>
+    <h1 id = "title">세븐나이츠 영웅 장비</h1>
+    <div id = "search">
+        <form id = "heroSearch" action = "heroInfo.html">
+            <input class = "searchBox" type = "text"  name = "name" placeholder="영웅 이름 입력">
+            <input class = "searchBox1" type = "submit" value = "검색">
+        </form>
+    </div>
+    <div id = "heroList">
+        <button class="hero-btn" data-name="파스칼">파스칼</button>
+        <button class="hero-btn" data-name="에스파다">에스파다</button>
+        <button class="hero-btn" data-name="세인">세인</button>
+        <br>
+        <button class="hero-btn" data-name="발리스타">발리스타</button>
+        <button class="hero-btn" data-name="타카">타카</button>
+        <button class="hero-btn" data-name="루리">루리</button>
+        <br>
+        <button class="hero-btn" data-name="비담">비담</button>
+        <button class="hero-btn" data-name="태오">태오</button>
+        <button class="hero-btn" data-name="벨리카">벨리카</button>
+        <br>
+        <button class="hero-btn" data-name="실베스타">실베스타</button>
+        <button class="hero-btn" data-name="연희">연희</button>
+        <button class="hero-btn" data-name="델론즈">델론즈</button>
+        <br>
+        <button class="hero-btn" data-name="제이브">제이브</button>
+        <button class="hero-btn" data-name="에반">에반</button>
+        <button class="hero-btn" data-name="루디">루디</button>
+        <br>
+        <button class="hero-btn" data-name="챈슬러">챈슬러</button>
+        <button class="hero-btn" data-name="룩">룩</button>
+        <button class="hero-btn" data-name="아라곤">아라곤</button>
+        <br>
+        <button class="hero-btn" data-name="리나">리나</button>
+        <button class="hero-btn" data-name="유이">유이</button>
+        <button class="hero-btn" data-name="엘리스">엘리스</button>
+        <br>
+        <button class="hero-btn" data-name="아일린">아일린</button>
+        <button class="hero-btn" data-name="유신">유신</button>
+        <button class="hero-btn" data-name="바네사">바네사</button>
+        <br>
+        <button class="hero-btn" data-name="스파이크">스파이크</button>
+        <button class="hero-btn" data-name="니아">니아</button>
+        <button class="hero-btn" data-name="크리스">크리스</button>
+        <br>
+        <button class="hero-btn" data-name="녹스">녹스</button>
+        <button class="hero-btn" data-name="에이스">에이스</button>
+        <button class="hero-btn" data-name="레이첼">레이첼</button>
+        <br>
+        <button class="hero-btn" data-name="블랙로즈">블랙로즈</button>
+        <button class="hero-btn" data-name="카론">카론</button>
+        <button class="hero-btn" data-name="빅토리아">빅토리아</button>
+        <br/>
+        <button class="hero-btn" data-name="루시">루시</button>
+        <button class="hero-btn" data-name="아수라">아수라</button>
+        <button class="hero-btn" data-name="레오">레오</button>
+
+    </div>
+
+
+    <script>
+        document.getElementById("hero-btn").onclick = function () {
+            window.location.href = "heroInfo.html";
+        };
+    </script>
+</body>
